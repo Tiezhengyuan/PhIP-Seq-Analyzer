@@ -1,0 +1,150 @@
+/home/yuan/rawdata_phip/phipseq17_human_variables.txt
+/home/yuan/rawdata_phip/phipseq17_human_variables.txt
+home directory of phip tool: /home/yuan/phip/
+Result directory /home/yuan/results_phip/phipseq17_human/
+write a dictionary to /home/yuan/results_phip/phipseq17_human/Total.log
+In proteins: 29372, In peptides: 259346
+Number of protein: 29372. Number of peptides: 259346
+write a dictionary to /home/yuan/results_phip/phipseq17_human/protein_peptides.txt
+Bowtie index of /home/yuan/phip/ref_seq/T7Pep2_human.fa exists
+get sample_raw and raw_sample
+hunt fastq files from /home/yuan/rawdata_phip/phipseq17/
+Number of raw files: 194
+Read sample file: /home/yuan/results_phip/phipseq17_human/sample_info.csv
+
+Sample and raw files:
+1: CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.1_R1.fq']
+2: CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.2	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.2_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.2_R1.fq']
+3: CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.3	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.3_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.3_R1.fq']
+4: CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.4	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.4_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.4_R1.fq']
+5: CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.5	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.5_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.5_R1.fq']
+6: CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.6	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.6_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.6_R1.fq']
+7: CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.7	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.7_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.7_R1.fq']
+8: CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.8	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.8_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.8_R1.fq']
+9: CTLA4.CSF.unkown_neuro_AID.SP_CSF.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.CSF.unkown_neuro_AID.SP_CSF.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.CSF.unkown_neuro_AID.SP_CSF.20A20G.1_R1.fq']
+10: CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.35.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.35.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.35.20A20G.1_R1.fq']
+11: CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.36.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.36.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.36.20A20G.1_R1.fq']
+12: CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.37.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.37.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.37.20A20G.1_R1.fq']
+13: CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.38.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.38.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.38.20A20G.1_R1.fq']
+14: CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.39.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.39.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.39.20A20G.1_R1.fq']
+15: CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.40.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.40.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.40.20A20G.1_R1.fq']
+16: CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.41.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.41.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.41.20A20G.1_R1.fq']
+17: CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.42.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.42.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.42.20A20G.1_R1.fq']
+18: CTLA4.Serum.CellSurface.1.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.CellSurface.1.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.CellSurface.1.20A20G.1_R1.fq']
+19: CTLA4.Serum.CellSurface.10.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.CellSurface.10.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.CellSurface.10.20A20G.1_R1.fq']
+20: CTLA4.Serum.CellSurface.2.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.CellSurface.2.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.CellSurface.2.20A20G.1_R1.fq']
+21: CTLA4.Serum.CellSurface.3.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.CellSurface.3.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.CellSurface.3.20A20G.1_R1.fq']
+22: CTLA4.Serum.CellSurface.4.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.CellSurface.4.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.CellSurface.4.20A20G.1_R1.fq']
+23: CTLA4.Serum.CellSurface.5.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.CellSurface.5.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.CellSurface.5.20A20G.1_R1.fq']
+24: CTLA4.Serum.CellSurface.6.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.CellSurface.6.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.CellSurface.6.20A20G.1_R1.fq']
+25: CTLA4.Serum.CellSurface.7.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.CellSurface.7.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.CellSurface.7.20A20G.1_R1.fq']
+26: CTLA4.Serum.CellSurface.8.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.CellSurface.8.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.CellSurface.8.20A20G.1_R1.fq']
+27: CTLA4.Serum.CellSurface.9.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.CellSurface.9.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.CellSurface.9.20A20G.1_R1.fq']
+28: CTLA4.Serum.Diabetes insipidus (central): hypophysitis?.10.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Diabetes insipidus (central): hypophysitis?.10.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Diabetes insipidus (central): hypophysitis?.10.20A20G.1_R1.fq']
+29: CTLA4.Serum.Diabetes insipidus and GH deficiency.9.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Diabetes insipidus and GH deficiency.9.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Diabetes insipidus and GH deficiency.9.20A20G.1_R1.fq']
+30: CTLA4.Serum.Diabetes insipidus.11.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Diabetes insipidus.11.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Diabetes insipidus.11.20A20G.1_R1.fq']
+31: CTLA4.Serum.Diabetes insipidus.12.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Diabetes insipidus.12.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Diabetes insipidus.12.20A20G.1_R1.fq']
+32: CTLA4.Serum.Diabetes insipidus.13.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Diabetes insipidus.13.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Diabetes insipidus.13.20A20G.1_R1.fq']
+33: CTLA4.Serum.Diabetes insipidus.14.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Diabetes insipidus.14.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Diabetes insipidus.14.20A20G.1_R1.fq']
+34: CTLA4.Serum.Diabetes insipidus.15.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Diabetes insipidus.15.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Diabetes insipidus.15.20A20G.1_R1.fq']
+35: CTLA4.Serum.Diabetes insipidus.16.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Diabetes insipidus.16.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Diabetes insipidus.16.20A20G.1_R1.fq']
+36: CTLA4.Serum.Healthy.CS2.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Healthy.CS2.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Healthy.CS2.20A20G.1_R1.fq']
+37: CTLA4.Serum.Healthy.DP2.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Healthy.DP2.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Healthy.DP2.20A20G.1_R1.fq']
+38: CTLA4.Serum.Healthy.GR.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Healthy.GR.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Healthy.GR.20A20G.1_R1.fq']
+39: CTLA4.Serum.Healthy.MP.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Healthy.MP.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Healthy.MP.20A20G.1_R1.fq']
+40: CTLA4.Serum.Healthy.OR2.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Healthy.OR2.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Healthy.OR2.20A20G.1_R1.fq']
+41: CTLA4.Serum.Healthy.PaS2.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Healthy.PaS2.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Healthy.PaS2.20A20G.1_R1.fq']
+42: CTLA4.Serum.Healthy.RP2.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Healthy.RP2.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Healthy.RP2.20A20G.1_R1.fq']
+43: CTLA4.Serum.Healthy.TP2.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Healthy.TP2.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Healthy.TP2.20A20G.1_R1.fq']
+44: CTLA4.Serum.Healthy.UD.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Healthy.UD.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Healthy.UD.20A20G.1_R1.fq']
+45: CTLA4.Serum.Hopkins Pancreas GVAX+Ipi.33.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Hopkins Pancreas GVAX+Ipi.33.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Hopkins Pancreas GVAX+Ipi.33.20A20G.1_R1.fq']
+46: CTLA4.Serum.Hopkins Pancreas GVAX+Ipi.34.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Hopkins Pancreas GVAX+Ipi.34.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Hopkins Pancreas GVAX+Ipi.34.20A20G.1_R1.fq']
+47: CTLA4.Serum.Hopkins Pancreas GVAX_only.55.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Hopkins Pancreas GVAX_only.55.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Hopkins Pancreas GVAX_only.55.20A20G.1_R1.fq']
+48: CTLA4.Serum.Hopkins Pancreas GVAX_only.56.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Hopkins Pancreas GVAX_only.56.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Hopkins Pancreas GVAX_only.56.20A20G.1_R1.fq']
+49: CTLA4.Serum.Hopkins Pancreas GVAX_only.57.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Hopkins Pancreas GVAX_only.57.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Hopkins Pancreas GVAX_only.57.20A20G.1_R1.fq']
+50: CTLA4.Serum.Hopkins Pancreas GVAX_only.58.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Hopkins Pancreas GVAX_only.58.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Hopkins Pancreas GVAX_only.58.20A20G.1_R1.fq']
+51: CTLA4.Serum.Hopkins Pancreas GVAX_only.59.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Hopkins Pancreas GVAX_only.59.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Hopkins Pancreas GVAX_only.59.20A20G.1_R1.fq']
+52: CTLA4.Serum.Hopkins Pancreas GVAX_only.60.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Hopkins Pancreas GVAX_only.60.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Hopkins Pancreas GVAX_only.60.20A20G.1_R1.fq']
+53: CTLA4.Serum.Hopkins Pancreas GVAX_only.61.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Hopkins Pancreas GVAX_only.61.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Hopkins Pancreas GVAX_only.61.20A20G.1_R1.fq']
+54: CTLA4.Serum.Hopkins Pancreas GVAX_only.62.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Hopkins Pancreas GVAX_only.62.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Hopkins Pancreas GVAX_only.62.20A20G.1_R1.fq']
+55: CTLA4.Serum.Hopkins Pancreas Ipi only.43.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Hopkins Pancreas Ipi only.43.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Hopkins Pancreas Ipi only.43.20A20G.1_R1.fq']
+56: CTLA4.Serum.Hopkins Pancreas Ipi only.44.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Hopkins Pancreas Ipi only.44.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Hopkins Pancreas Ipi only.44.20A20G.1_R1.fq']
+57: CTLA4.Serum.Hopkins Pancreas Ipi only.45.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Hopkins Pancreas Ipi only.45.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Hopkins Pancreas Ipi only.45.20A20G.1_R1.fq']
+58: CTLA4.Serum.Hopkins Pancreas Ipi only.46.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Hopkins Pancreas Ipi only.46.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Hopkins Pancreas Ipi only.46.20A20G.1_R1.fq']
+59: CTLA4.Serum.Hopkins Pancreas Ipi only.47.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Hopkins Pancreas Ipi only.47.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Hopkins Pancreas Ipi only.47.20A20G.1_R1.fq']
+60: CTLA4.Serum.Hopkins Pancreas Ipi only.48.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Hopkins Pancreas Ipi only.48.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Hopkins Pancreas Ipi only.48.20A20G.1_R1.fq']
+61: CTLA4.Serum.Hopkins Pancreas Ipi only.49.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Hopkins Pancreas Ipi only.49.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Hopkins Pancreas Ipi only.49.20A20G.1_R1.fq']
+62: CTLA4.Serum.Hopkins Pancreas Ipi only.50.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Hopkins Pancreas Ipi only.50.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Hopkins Pancreas Ipi only.50.20A20G.1_R1.fq']
+63: CTLA4.Serum.Hopkins Pancreas Ipi only.51.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Hopkins Pancreas Ipi only.51.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Hopkins Pancreas Ipi only.51.20A20G.1_R1.fq']
+64: CTLA4.Serum.Hopkins Pancreas Ipi only.52.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Hopkins Pancreas Ipi only.52.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Hopkins Pancreas Ipi only.52.20A20G.1_R1.fq']
+65: CTLA4.Serum.Hopkins Pancreas Ipi only.53.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Hopkins Pancreas Ipi only.53.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Hopkins Pancreas Ipi only.53.20A20G.1_R1.fq']
+66: CTLA4.Serum.Hopkins Pancreas Ipi only.54.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.Hopkins Pancreas Ipi only.54.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.Hopkins Pancreas Ipi only.54.20A20G.1_R1.fq']
+67: CTLA4.Serum.IVIG.Miller_IVIG.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.IVIG.Miller_IVIG.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.IVIG.Miller_IVIG.20A20G.1_R1.fq']
+68: CTLA4.Serum.IVIG.SJ_154.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.IVIG.SJ_154.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.IVIG.SJ_154.20A20G.1_R1.fq']
+69: CTLA4.Serum.MS.CA2.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.MS.CA2.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.MS.CA2.20A20G.1_R1.fq']
+70: CTLA4.Serum.MS.DS2.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.MS.DS2.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.MS.DS2.20A20G.1_R1.fq']
+71: CTLA4.Serum.MS.DS2.20A20G.2	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.MS.DS2.20A20G.2_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.MS.DS2.20A20G.2_R1.fq']
+72: CTLA4.Serum.MS.GG.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.MS.GG.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.MS.GG.20A20G.1_R1.fq']
+73: CTLA4.Serum.MS.MF.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.MS.MF.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.MS.MF.20A20G.1_R1.fq']
+74: CTLA4.Serum.MS.OF2.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.MS.OF2.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.MS.OF2.20A20G.1_R1.fq']
+75: CTLA4.Serum.MS.PaM2.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.MS.PaM2.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.MS.PaM2.20A20G.1_R1.fq']
+76: CTLA4.Serum.MS.RS2.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.MS.RS2.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.MS.RS2.20A20G.1_R1.fq']
+77: CTLA4.Serum.MS.TE2.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.MS.TE2.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.MS.TE2.20A20G.1_R1.fq']
+78: CTLA4.Serum.MS.US.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.MS.US.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.MS.US.20A20G.1_R1.fq']
+79: CTLA4.Serum.New York Melanoma Ipi_only.19.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.New York Melanoma Ipi_only.19.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.New York Melanoma Ipi_only.19.20A20G.1_R1.fq']
+80: CTLA4.Serum.New York Melanoma Ipi_only.20.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.New York Melanoma Ipi_only.20.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.New York Melanoma Ipi_only.20.20A20G.1_R1.fq']
+81: CTLA4.Serum.New York Melanoma Ipi_only.21.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.New York Melanoma Ipi_only.21.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.New York Melanoma Ipi_only.21.20A20G.1_R1.fq']
+82: CTLA4.Serum.New York Melanoma Ipi_only.22.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.New York Melanoma Ipi_only.22.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.New York Melanoma Ipi_only.22.20A20G.1_R1.fq']
+83: CTLA4.Serum.New York Melanoma Ipi_only.23.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.New York Melanoma Ipi_only.23.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.New York Melanoma Ipi_only.23.20A20G.1_R1.fq']
+84: CTLA4.Serum.New York Melanoma Ipi_only.24.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.New York Melanoma Ipi_only.24.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.New York Melanoma Ipi_only.24.20A20G.1_R1.fq']
+85: CTLA4.Serum.New York Melanoma Ipi_only.25.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.New York Melanoma Ipi_only.25.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.New York Melanoma Ipi_only.25.20A20G.1_R1.fq']
+86: CTLA4.Serum.New York Melanoma Ipi_only.26.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.New York Melanoma Ipi_only.26.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.New York Melanoma Ipi_only.26.20A20G.1_R1.fq']
+87: CTLA4.Serum.New York Melanoma Ipi_only.27.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.New York Melanoma Ipi_only.27.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.New York Melanoma Ipi_only.27.20A20G.1_R1.fq']
+88: CTLA4.Serum.New York Melanoma Ipi_only.28.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.New York Melanoma Ipi_only.28.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.New York Melanoma Ipi_only.28.20A20G.1_R1.fq']
+89: CTLA4.Serum.New York Melanoma Ipi_only.29.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.New York Melanoma Ipi_only.29.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.New York Melanoma Ipi_only.29.20A20G.1_R1.fq']
+90: CTLA4.Serum.New York Melanoma Ipi_only.30.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.New York Melanoma Ipi_only.30.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.New York Melanoma Ipi_only.30.20A20G.1_R1.fq']
+91: CTLA4.Serum.New York Melanoma Ipi_only.31.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.New York Melanoma Ipi_only.31.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.New York Melanoma Ipi_only.31.20A20G.1_R1.fq']
+92: CTLA4.Serum.New York Melanoma Ipi_only.32.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.New York Melanoma Ipi_only.32.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.New York Melanoma Ipi_only.32.20A20G.1_R1.fq']
+93: CTLA4.Serum.New York Prostate Ipi + Radio.17.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.New York Prostate Ipi + Radio.17.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.New York Prostate Ipi + Radio.17.20A20G.1_R1.fq']
+94: CTLA4.Serum.New York Prostate Ipi + Radio.18.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.New York Prostate Ipi + Radio.18.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.New York Prostate Ipi + Radio.18.20A20G.1_R1.fq']
+95: CTLA4.Serum.unkown_AID.Miller.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.unkown_AID.Miller.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.unkown_AID.Miller.20A20G.1_R1.fq']
+96: CTLA4.Serum.unkown_neuro_AID.SP_serum.20A20G.1	['/home/yuan/rawdata_phip/phipseq17/1/CTLA4.Serum.unkown_neuro_AID.SP_serum.20A20G.1_R1.fq', '/home/yuan/rawdata_phip/phipseq17/2/CTLA4.Serum.unkown_neuro_AID.SP_serum.20A20G.1_R1.fq']
+get group names if exists
+Groups of group1: ['NC', 'PhIP']
+No group name in Column 4
+
+Number of negative Controls (Beads only): 8
+Number of PhIP samples:96
+
+
+
+####Parameters of PHIP: 
+
+export normalized data frame into /home/yuan/results_phip/phipseq17_human/statistics/lowRC_pep_scalingRC.txt.
+export normalized data frame into /home/yuan/results_phip/phipseq17_human/statistics/lowRC_pep_sdRC.txt.
+export normalized data frame into /home/yuan/results_phip/phipseq17_human/statistics/lowRC_pep_correctedRC.txt.
+	Linear regression of std values depending on the medians of negative controls
+write a dictionary to /home/yuan/results_phip/phipseq17_human/Total.log
+	Linear regression of median values of phip sample depending on medians of negative controls
+	 calculate z scores against NC:
+export data frame to  /home/yuan/results_phip/phipseq17_human/statistics/lowRC_pep_NCPHIPzscores.txt
+CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.1          1
+CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.2          4
+CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.3         98
+CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.4         10
+CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.5          2
+CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.6          2
+CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.7          1
+CTLA4.BEADS_ONLY.BEADS_ONLY.BEADS_ONLY.20A20G.8          0
+CTLA4.CSF.unkown_neuro_AID.SP_CSF.20A20G.1             341
+CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.35.20A20G.1    649
+CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.36.20A20G.1    688
+CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.37.20A20G.1    443
+CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.38.20A20G.1    787
+CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.39.20A20G.1    557
+CTLA4.Serum.Amsterdam Prostate GVAX+Ipi.40.20A20G.1    635
+...
+CTLA4.Serum.New York Melanoma Ipi_only.22.20A20G.1        797
+CTLA4.Serum.New York Melanoma Ipi_only.23.20A20G.1        716
+CTLA4.Serum.New York Melanoma Ipi_only.24.20A20G.1        648
+CTLA4.Serum.New York Melanoma Ipi_only.25.20A20G

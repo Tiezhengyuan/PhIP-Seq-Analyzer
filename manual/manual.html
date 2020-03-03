@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>PhIP-seq Analyzer</title>
+</head>
+
+<body>
+
+	<h1>Bioinformatics Tools: PhIP-Seq Analyzer for PhIP-Seq Data Analysis</h1>
+	<link rel='stylesheet' href="style.css">	
+	Demo version, Date: 20170524
+	<hr>
+	<br style="line-height: 4">
+
+	<section><h2><mark>Step1: Data preparation</mark></h2>
+	<p>1. It is supposed that the home folder is ./, and the sequencing files determined by sequencing analyzer were put in the fold ./raw/. 
+		so they are<br>
+		<p style="text-indent: 40px">fastq file: ./raw/PhIPseq_R1.fastq.gz</p>
+		<p style="text-indent: 40px">index file: ./raw/PhIPseq_I1.fastq.gz</p>
+		<p style="text-indent: 40px">barcode file: ./raw/Sample-Barcode.txt</p>
+	</p>
+	<p>2. The splitted fastq files would be stored into the directory<br>
+		 <p style="text-indent: 40px"> ~/phip/PhIP-seq_Analyzer/test_rawdata/</p>
+	</p>
+	<p>3. The running mode would be phipseq analysis mode. 
+		The output folders would be ./test_human and ./test_virus. The last parameter should be -y ./test
+	</p>
+	<p>4. enter the folder known as PhIP-seaq_Analyzer.</p>
+	<hr>
+	</section>
+
+	<h2><mark>Step2: Demultiplex FASTQ file</mark></h2>
+	<h3>Example 1</h3>
+	<p>Mostly used function involves demultiplexing and generating sample_info.csv and variables.txt run the command line like the below:<br>
+		<p style="text-indent: 40px">
+		#python ./bin/bioTreatFASTQ.py -i ./raw/PhIPseq_I1.fastq.gz -f ./raw/PhIPseq_R1.fastq.gz 
+		-b ./raw/Sample-Barcode.txt -o ./test_rawdata/ -y ./test
+		</p>
+		Once the proceduce is done, some folders and files would be created:<br> 
+		There would be many fastq files in ./test_rawdata/, and the file names would be determined by the barcode file.<br>
+		The folders known as ./test_human and ./test_virus would be created, of which has sample_info.csv and variables.txt<br>
+
+		Note: the pipeline only accept the absolute path of a directory or file
+	</p>
+	
+	<h3>Example 2</h3>
+	<p>trim nucleotides when demultiplexing, for example
+		<p style="text-indent: 40px">trim 10nt from 3-end:      					-t 0:10</p>
+		<p style="text-indent: 40px">trim 5nt from 5-end and 10nt from 3-end:  	-t 5:10</p>
+
+		So the command would like:<br>
+		<p style="text-indent: 40px">
+		#python ./bin/bioTreatFASTQ.py -t 0:50 -i ./raw/PhIPseq_I1.fastq.gz -f ./raw/PhIPseq_R1.fastq.gz 
+		-b ./raw/Sample-Barcode.txt -o ./test_rawdata/ -y ./test
+		</p>
+	</p>
+	
+	<h3>Example 3</h3>
+	<p>Demultiplexing step can be skipped, and directly get sample_info.csv and variables.txt.<br> 
+		Here *.fastq files were stored at ./test_rawdata/<br>
+		<p style="text-indent: 40px">
+			# python ./bin/bioTreatFASTQ.py -o ./test_rawdata/ -y ./test
+		</p>
+	</p>
+
+	<h3>Example 4</h3>
+	<p>skip demultiplexing step, and trim fastq reads<br>
+		<p style="text-indent: 40px">
+			# python ./bin/bioTreatFASTQ.py -t 0:50 -x ./test_raw/ -o ./test_rawdata/ -y ./test
+		</p>
+
+		Here, all fastq files were put in the ./test_raw/, and the trimmed fastq files (remove 50nt from 3-end of each read) were saved into ./test_rawdata/
+	</p>
+	<hr>
+	
+	<h2><mark>Step3: phipseq analysis</mark></h2>
+	<p> run the command line like the below:<br></p>
+	<p style="text-indent: 40px">#human library</p>
+	<p style="text-indent: 40px">python ./bin/bioPHIPseq.py ./test_human/variables.txt</p>
+	<p style="text-indent: 40px">#virus library</p>
+	<p style="text-indent: 40px">python ./bin/bioPHIPseq.py ./test_virus/variables.txt</p>
+	<hr>
+
+	<h2>Help</h2>	
+	<h3>About barcode file</h3>
+	1. barcode file should be *.txt. The first and second columns should be barcode sequences and sample names, respectively.<br>
+	2.Regarding sample names, avoid some characters namely slash(/ or \), * @ or white space. And the character -, _ . is ok.<br>
+	3. No while line is allowed.<br>
+
+	<h3>ERROR: Mac OS X: ValueError: unknown locale: UTF-8 in Python</h3>
+	<p>
+	Resolution: If you have faced the error on MacOS X, here's the quick fix - add these lines to your ~/.bash_profile:<br>
+	export LC_ALL=en_US.UTF-8<br>
+	export LANG=en_US.UTF-8<br>
+	end then reload bash_profile:<br> 
+	# source ~/.bash_profile<br>
+	</p>
+
+
+	<br>
+	<hr>
+	<footer>Copyright&Copy;2015-2018. All rights reserved. Used with permission.	</footer>
+
+</body>
+</html>
+
+

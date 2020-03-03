@@ -1,0 +1,558 @@
+#generate 
+#raw data
+/home-2/hlarman1@jhu.edu/work/data/PhIP-seq/
+#raw data
+/home-2/hlarman1@jhu.edu/work/yuan/rawdata_phip/
+#results
+/home-2/hlarman1@jhu.edu/work/yuan/results_phip/
+
+#preprocessing
+python ~/work/yuan/phip/bin/bioTreatFASTQ.py -f   -i   -b   -o   -r
+python ~/work/yuan/phip/bin/bioTreatFASTQ.py -f   -i  -m  -n  -b   -o   -r  
+python ~/work/yuan/phip/bin/bioTreatFASTQ.py -o   -x  -y 
+
+#phipseq
+
+
+
+python ~/work/yuan/phip/bin/bioTreatFASTQ.py -t 0:1 -f /home-4/tyuan10@jhu.edu/work/data/PTM_PhIP-seq/PTM_PhIP-seq1/PAD4_S1_R1_001.fastq  -i /home-4/tyuan10@jhu.edu/work/data/PTM_PhIP-seq/PTM_PhIP-seq1/PAD4_S1_R2_001.fastq.gz  -b /home-4/tyuan10@jhu.edu/work/data/PTM_PhIP-seq/PTM_PhIP-seq1/GenericR2map.txt  -o /home-4/tyuan10@jhu.edu/work/yuan/rawdata_others/PTM1  -r /home-4/tyuan10@jhu.edu/work/yuan/results_others/PTM1
+
+   
+
+
+####################
+#20161102
+#LISH6
+
+python ~/work/yuan/phip/bin/bioTreatFASTQ.py -t 0:10 -f ~/work/data/LISH/LISH6/Undetermined_S0_L001_R1_001.fastq.gz  -i /home-4/tyuan10@jhu.edu/work/data/LISH/LISH6/Undetermined_S0_L001_I_001.fastq -m /home-4/tyuan10@jhu.edu/work/data/LISH/LISH6/Undetermined_S0_L001_I1_001.fastq.gz -n /home-4/tyuan10@jhu.edu/work/data/LISH/LISH6/Undetermined_S0_L001_I2_001.fastq.gz  -b /home-4/tyuan10@jhu.edu/work/data/LISH/LISH6/LISH6_barcodemap.txt -o ~/work/yuan/rawdata_LISH/LISH56_L1/  -r ~/work/yuan/results_LISH/LISH6_L1/
+
+python ~/work/yuan/phip/bin/bioTreatFASTQ.py -t 0:10 -f /home-4/tyuan10@jhu.edu/work/data/LISH/LISH6/Undetermined_S0_L002_R1_001.fastq.gz  -i /home-4/tyuan10@jhu.edu/work/data/LISH/LISH6/Undetermined_S0_L002_I_001.fastq -m /home-4/tyuan10@jhu.edu/work/data/LISH/LISH6/Undetermined_S0_L002_I2_001.fastq.gz -n /home-4/tyuan10@jhu.edu/work/data/LISH/LISH6/Undetermined_S0_L002_I1_001.fastq.gz  -b /home-4/tyuan10@jhu.edu/work/data/LISH/LISH6/LISH6_barcodemap.txt -o ~/work/yuan/rawdata_LISH/LISH56_L2/  -r ~/work/yuan/results_LISH/LISH6_L2/
+
+                  
+  
+cp ~/work/yuan/results_LISH/LISH4/variables.txt ~/work/yuan/results_LISH/LISH6_L1/
+cp ~/work/yuan/results_LISH/LISH4/variables.txt ~/work/yuan/results_LISH/LISH6_L2/
+python ~/work/yuan/phip/bin/bioLISH.py ~/work/yuan/results_LISH/LISH6_L1/variables.txt
+python ~/work/yuan/phip/bin/bioLISH.py ~/work/yuan/results_LISH/LISH6_L2/variables.txt
+
+#############
+#20161020
+
+#phipseq23
+python ~/work/yuan/phip/bin/Process_FASTQ.py -o ~/work/yuan/rawdata_phip/phipseq23/  -x ~/work/data/PhIP-seq/PhIP-seq23_T1D3_redo_unfiltered -y ~/work/yuan/results_phip/phipseq23
+
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq23_human/variables.txt > ~/work/yuan/results_phip/phipseq23_human/variables.txt.log
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq23_virus/variables.txt > ~/work/yuan/results_phip/phipseq23_virus/variables.txt.log
+
+
+#phipseq27
+python ~/work/yuan/phip/bin/Process_FASTQ.py -o ~/work/yuan/rawdata_phip/phipseq27/  -x ~/work/data/PhIP-seq/PhIP-seq27_Sjogrens2_1_redo -y ~/work/yuan/results_phip/phipseq27
+
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq27_human/variables.txt > ~/work/yuan/results_phip/phipseq27_human/variables.txt.log
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq27_virus/variables.txt > ~/work/yuan/results_phip/phipseq27_virus/variables.txt.log
+
+
+#phipseq29
+python ~/work/yuan/phip/bin/Process_FASTQ.py -o ~/work/yuan/rawdata_phip/phipseq29/  -x ~/work/data/PhIP-seq/PhIP-seq29_Autism1 -y ~/work/yuan/results_phip/phipseq29
+
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq29_human/variables.txt > ~/work/yuan/results_phip/phipseq29_human/variables.txt.log
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq29_virus/variables.txt > ~/work/yuan/results_phip/phipseq29_virus/variables.txt.log
+
+
+#phipseq30
+python ~/work/yuan/phip/bin/Process_FASTQ.py -o ~/work/yuan/rawdata_phip/phipseq30/  -x ~/work/data/PhIP-seq/PhIP-seq30_Autism2 -y ~/work/yuan/results_phip/phipseq30
+
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq30_human/variables.txt > ~/work/yuan/results_phip/phipseq30_human/variables.txt.log
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq30_virus/variables.txt > ~/work/yuan/results_phip/phipseq30_virus/variables.txt.log
+
+
+
+####################
+#2010926
+#LISH5
+python ~/work/yuan/phip/bin/Process_FASTQ.py -t 0:11 -f ~/work/data/LISH/LISH5/LISH-Seq5_S1_R1_001.fastq.gz  -i ~/work/data/LISH/LISH5/LISH-Seq5_S1_I1_001.fastq -m ~/work/data/LISH/LISH5/LISH-Seq5_S1_R2_001.fastq.gz -n  ~/work/data/LISH/LISH5/LISH-Seq5_S1_R3_001.fastq.gz -b ~/work/data/LISH/LISH5/LISH5_barcodemap.txt -o ~/work/yuan/rawdata_LISH/LISH5/  -r ~/work/yuan/results_LISH/LISH5/
+
+cp ~/work/yuan/results_LISH/LISH4/variables.txt ~/work/yuan/results_LISH/LISH5/
+
+python ~/work/yuan/phip/bin/LISH.py ~/work/yuan/results_LISH/LISH5/variables.txt
+
+
+
+
+
+
+###################3
+#20160914  Janelle's data
+python ~/work/yuan/phip/bin/Process_FASTQ.py -f /home-2/hlarman1@jhu.edu/work/data/Montagne/20160809_TCR/Undetermined_S0_L001_R1_001.fastq  -i /home-2/hlarman1@jhu.edu/work/data/Montagne/20160809_TCR/Undetermined_S0_L001_I2_001.fastq  -b  /home-2/hlarman1@jhu.edu/work/data/Montagne/20160809_TCR/samplebarcode.txt -o /home-2/hlarman1@jhu.edu/work/data/Montagne/20160809_TCR/rawdata_I1  -r /home-2/hlarman1@jhu.edu/work/data/Montagne/20160809_TCR/results_I1/
+
+
+python ~/work/yuan/phip/bin/Process_FASTQ.py -f /home-2/hlarman1@jhu.edu/work/data/Montagne/20160809_TCR/Undetermined_S0_L001_I1_001.fastq  -i /home-2/hlarman1@jhu.edu/work/data/Montagne/20160809_TCR/Undetermined_S0_L001_I2_001.fastq  -b  /home-2/hlarman1@jhu.edu/work/data/Montagne/20160809_TCR/samplebarcode.txt -o /home-2/hlarman1@jhu.edu/work/data/Montagne/20160809_TCR/rawdata_I2  -r /home-2/hlarman1@jhu.edu/work/data/Montagne/20160809_TCR/results_I2/
+
+
+#########################
+#20160907 LISH4
+
+python ~/work/yuan/phip/bin/Process_FASTQ.py -t 0:60 -f ~/work/data/LISH/LISH4/Undetermined_S0_L001_R1_001.fastq.gz  -i ~/work/data/LISH/LISH4/Undetermined_S0_L001_I1_001.fastq.gz  -b ~/work/data/LISH/LISH4/barcode_map_generic.txt  -o ~/work/yuan/rawdata_LISH/LISH4/  -r ~/work/yuan/results_LISH/LISH4/
+
+python ~/work/yuan/phip/bin/LISH.py ~/work/yuan/results_LISH/LISH4/variables.txt
+
+######################
+#20160902
+#phipseq21
+python ~/work/yuan/phip/bin/Process_FASTQ.py -o ~/work/yuan/rawdata_phip/phipseq21/  -x ~/work/data/PhIP-seq/PhIP-seq21_T1D1 -y ~/work/yuan/results_phip/phipseq21
+
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq21_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq21_virus/variables.txt
+
+
+#phipseq22
+python ~/work/yuan/phip/bin/Process_FASTQ.py -o ~/work/yuan/rawdata_phip/phipseq22/  -x ~/work/data/PhIP-seq/PhIP-seq22_T1D2 -y ~/work/yuan/results_phip/phipseq22
+
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq22_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq22_virus/variables.txt
+
+
+#phipseq23
+python ~/work/yuan/phip/bin/Process_FASTQ.py -o ~/work/yuan/rawdata_phip/phipseq23/  -x ~/work/data/PhIP-seq/PhIP-seq23_T1D3 -y ~/work/yuan/results_phip/phipseq23
+
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq23_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq23_virus/variables.txt
+
+
+python ~/work/yuan/phip/bin/Process_FASTQ.py -o ~/work/yuan/rawdata_phip/phipseq23un/  -x ~/work/data/PhIP-seq/PhIP-seq23_T1D3_unfiltered -y ~/work/yuan/results_phip/phipseq23un
+
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq23un_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq23un_virus/variables.txt
+
+#phipseq24
+python ~/work/yuan/phip/bin/Process_FASTQ.py -o ~/work/yuan/rawdata_phip/phipseq24/  -x ~/work/data/PhIP-seq/PhIP-seq24_T1D4 -y ~/work/yuan/results_phip/phipseq24
+
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq24_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq24_virus/variables.txt
+
+
+#phipseq26
+python ~/work/yuan/phip/bin/Process_FASTQ.py -o ~/work/yuan/rawdata_phip/phipseq26/  -x ~/work/data/PhIP-seq/PhIP-seq26_Waldman -y ~/work/yuan/results_phip/phipseq26
+
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq26_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq26_virus/variables.txt
+
+#phipseq27
+python ~/work/yuan/phip/bin/Process_FASTQ.py -o ~/work/yuan/rawdata_phip/phipseq27/  -x ~/work/data/PhIP-seq/PhIP-seq27_Sjogrens2_1 -y ~/work/yuan/results_phip/phipseq27
+
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq27_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq27_virus/variables.txt
+
+
+#phipseq28
+python ~/work/yuan/phip/bin/Process_FASTQ.py -o ~/work/yuan/rawdata_phip/phipseq28/  -x ~/work/data/PhIP-seq/PhIP-seq28_Sjogrens2_2 -y ~/work/yuan/results_phip/phipseq28
+
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq28_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq28_virus/variables.txt
+
+
+
+##########################
+#20160819-22
+
+#phipseq2
+python ~/work/yuan/phip/bin/Process_FASTQ.py -f ~/work/data/PhIP-seq/PhIP-seq2_Scleroderma/Undetermined_S0_L001_R1_001.fastq  -i ~/work/data/PhIP-seq/PhIP-seq2_Scleroderma/Undetermined_S0_L001_I1_001.fastq  -b ~/work/data/PhIP-seq/PhIP-seq2_Scleroderma/20150611_PhIPseq2_Sample-Barcode_map.txt  -o ~/work/yuan/rawdata_phip/phipseq2/  -r ~/work/yuan/results_phip/phipseq2_human/
+
+mkdir ~/work/yuan/results_phip/phipseq2_virus/
+cp ~/work/yuan/results_phip/phipseq2_human/sample_info.csv ~/work/yuan/results_phip/phipseq2_virus/
+cp ~/work/yuan/phip/variables_human.txt ~/work/yuan/results_phip/phipseq2_human/variables.txt
+cp ~/work/yuan/phip/variables_virus.txt ~/work/yuan/results_phip/phipseq2_virus/variables.txt
+
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq2_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq2_virus/variables.txt
+
+#phipseq3
+python ~/work/yuan/phip/bin/Process_FASTQ.py -f ~/work/data/PhIP-seq/PhIP-seq3_Arthritides/Undetermined_S0_L002_R1_001.fastq  -i ~/work/data/PhIP-seq/PhIP-seq3_Arthritides/Undetermined_S0_L002_I1_001.fastq  -b ~/work/data/PhIP-seq/PhIP-seq3_Arthritides/20150617_PhIP-seq3_Arthritides_Sample-Barcode_map.txt  -o ~/work/yuan/rawdata_phip/phipseq3/  -r ~/work/yuan/results_phip/phipseq3_human/
+
+mkdir ~/work/yuan/results_phip/phipseq3_virus/
+cp ~/work/yuan/results_phip/phipseq3_human/sample_info.csv ~/work/yuan/results_phip/phipseq3_virus/
+cp ~/work/yuan/phip/variables_human.txt ~/work/yuan/results_phip/phipseq3_human/variables.txt
+cp ~/work/yuan/phip/variables_virus.txt ~/work/yuan/results_phip/phipseq3_virus/variables.txt
+
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq3_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq3_virus/variables.txt
+
+
+#phipseq4
+python ~/work/yuan/phip/bin/Process_FASTQ.py -f ~/work/data/PhIP-seq/PhIP-seq4_PD1_Ribas/Undetermined_S0_L003_R1_001.fastq  -i ~/work/data/PhIP-seq/PhIP-seq4_PD1_Ribas/Undetermined_S0_L003_I1_001.fastq  -b ~/work/data/PhIP-seq/PhIP-seq4_PD1_Ribas/PhIP-seq4_Ribas_SamplesBarcodeMap.txt  -o ~/work/yuan/rawdata_phip/phipseq4/  -r ~/work/yuan/results_phip/phipseq4_human/
+
+mkdir ~/work/yuan/results_phip/phipseq4_virus/
+cp ~/work/yuan/results_phip/phipseq4_human/sample_info.csv ~/work/yuan/results_phip/phipseq4_virus/
+cp ~/work/yuan/phip/variables_human.txt ~/work/yuan/results_phip/phipseq4_human/variables.txt
+cp ~/work/yuan/phip/variables_virus.txt ~/work/yuan/results_phip/phipseq4_virus/variables.txt
+
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq4_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq4_virus/variables.txt
+
+  
+#phipseq5
+python ~/work/yuan/phip/bin/Process_FASTQ.py -f ~/work/data/PhIP-seq/PhIP-seq5_PD1_Diaz/Undetermined_S0_L004_R1_001.fastq   -i ~/work/data/PhIP-seq/PhIP-seq5_PD1_Diaz/Undetermined_S0_L004_I1_001.fastq  -b ~/work/data/PhIP-seq/PhIP-seq5_PD1_Diaz/PhIP-seq5_Diaz_SamplesBarcodeMap.txt  -o ~/work/yuan/rawdata_phip/phipseq5/  -r ~/work/yuan/results_phip/phipseq5_human/
+
+mkdir ~/work/yuan/results_phip/phipseq5_virus/
+cp ~/work/yuan/results_phip/phipseq5_human/sample_info.csv ~/work/yuan/results_phip/phipseq5_virus/
+cp ~/work/yuan/phip/variables_human.txt ~/work/yuan/results_phip/phipseq5_human/variables.txt
+cp ~/work/yuan/phip/variables_virus.txt ~/work/yuan/results_phip/phipseq5_virus/variables.txt
+
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq5_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq5_virus/variables.txt
+
+  
+#phipseq6
+python ~/work/yuan/phip/bin/Process_FASTQ.py -f ~/work/data/PhIP-seq/PhIP-seq6_Sjogrens1/Undetermined_S0_L005_R1_001.fastq   -i ~/work/data/PhIP-seq/PhIP-seq6_Sjogrens1/Undetermined_S0_L005_I1_001.fastq  -b ~/work/data/PhIP-seq/PhIP-seq6_Sjogrens1/PhIP-seq6_Sjogrens_SamplesBarcodeMap20160816.txt  -o ~/work/yuan/rawdata_phip/phipseq6/  -r ~/work/yuan/results_phip/phipseq6_human/
+
+mkdir ~/work/yuan/results_phip/phipseq6_virus/
+cp ~/work/yuan/results_phip/phipseq6_human/sample_info.csv ~/work/yuan/results_phip/phipseq6_virus/
+cp ~/work/yuan/phip/variables_human.txt ~/work/yuan/results_phip/phipseq6_human/variables.txt
+cp ~/work/yuan/phip/variables_virus.txt ~/work/yuan/results_phip/phipseq6_virus/variables.txt
+
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq6_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq6_virus/variables.txt
+  
+  
+  
+  
+
+
+
+
+
+#phipseq19
+python ~/work/yuan/phip/bin/Process_FASTQ.py -f ~/work/data/PhIP-seq/PhIP-seq19_Singapore1/Undetermined_S0_L006_R1_001.fastq  -i ~/work/data/PhIP-seq/PhIP-seq19_Singapore1/Undetermined_S0_L006_I1_001.fastq  -b ~/work/data/PhIP-seq/PhIP-seq19_Singapore1/PhIP19_SamplesBarcodeMap.txt  -o ~/work/yuan/rawdata_phip/phipseq19/  -r ~/work/yuan/results_phip/phipseq19_human/
+
+mkdir ~/work/yuan/results_phip/phipseq19_virus/
+cp ~/work/yuan/results_phip/phipseq19_human/sample_info.csv ~/work/yuan/results_phip/phipseq19_virus/
+cp ~/work/yuan/phip/variables_human.txt ~/work/yuan/results_phip/phipseq19_human/variables.txt
+cp ~/work/yuan/phip/variables_virus.txt ~/work/yuan/results_phip/phipseq19_virus/variables.txt
+
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq19_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq19_virus/variables.txt
+
+#phipseq20
+python ~/work/yuan/phip/bin/Process_FASTQ.py -f ~/work/data/PhIP-seq/PhIP-seq20_Singapore2/Undetermined_S0_L007_R1_001.fastq  -i ~/work/data/PhIP-seq/PhIP-seq20_Singapore2/Undetermined_S0_L007_I1_001.fastq  -b ~/work/data/PhIP-seq/PhIP-seq20_Singapore2/PhIP20_SamplesBarcodeMap.txt  -o ~/work/yuan/rawdata_phip/phipseq20/  -r ~/work/yuan/results_phip/phipseq20_human/
+
+mkdir ~/work/yuan/results_phip/phipseq20_virus/
+cp ~/work/yuan/results_phip/phipseq20_human/sample_info.csv ~/work/yuan/results_phip/phipseq20_virus/
+cp ~/work/yuan/phip/variables_human.txt ~/work/yuan/results_phip/phipseq20_human/variables.txt
+cp ~/work/yuan/phip/variables_virus.txt ~/work/yuan/results_phip/phipseq20_virus/variables.txt
+
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq20_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq20_virus/variables.txt
+  
+
+#phipseq25
+python ~/work/yuan/phip/bin/Process_FASTQ.py -f ~/work/data/PhIP-seq/PhIP-seq25_BA/Undetermined_S0_L008_R1_001.fastq  -i ~/work/data/PhIP-seq/PhIP-seq25_BA/Undetermined_S0_L008_I1_001.fastq  -b ~/work/data/PhIP-seq/PhIP-seq25_BA/PhIP25_SamplesBarcode_map.txt  -o ~/work/yuan/rawdata_phip/phipseq25/  -r ~/work/yuan/results_phip/phipseq25_human/
+mkdir ~/work/yuan/results_phip/phipseq25_virus/
+cp ~/work/yuan/results_phip/phipseq25_human/sample_info.csv ~/work/yuan/results_phip/phipseq25_virus/
+cp ~/work/yuan/phip/variables_human.txt ~/work/yuan/results_phip/phipseq25_human/variables.txt
+cp ~/work/yuan/phip/variables_virus.txt ~/work/yuan/results_phip/phipseq25_virus/variables.txt
+
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq25_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq25_virus/variables.txt
+  
+
+#########################
+20160812
+#Gabe's data
+python ~/work/yuan/phip/bin/Process_FASTQ.py -f  ~/work/data/Protease/Cut2/Undetermined_S0_L001_R1_001.fastq -i ~/work/data/Protease/Cut2/Undetermined_S0_L001_I1_001.fastq -b ~/work/data/Protease/Cut2/Cut2_barcode_map.txt  -o /home-2/hlarman1@jhu.edu/work/yuan/rawdata_protease/cut2/  -r /home-2/hlarman1@jhu.edu/work/yuan/results_protease/cut2/
+
+python ~/work/yuan/phip/bin/LISH.py /home-2/hlarman1@jhu.edu/work/yuan/results_protease/cut2/variables.txt
+
+
+#Joe's data
+python ~/work/yuan/phip/bin/Process_FASTQ.py -t 0:60 -f ~/work/data/LISH/LISH3/Undetermined_S0_L001_R1_001.fastq  -i ~/work/data/LISH/LISH3/Undetermined_S0_L001_I1_001.fastq  -b ~/work/data/LISH/LISH3/LISH3_barcode_map.txt  -o /home-2/hlarman1@jhu.edu/work/yuan/rawdata_LISH/LISH3/  -r /home-2/hlarman1@jhu.edu/work/yuan/results_LISH/LISH3/
+
+python ~/work/yuan/phip/bin/LISH.py /home-2/hlarman1@jhu.edu/work/yuan/results_LISH/LISH3/variables.txt
+
+
+###########
+20160627
+#upload raw data
+rsync -ar --progress --delete /home/yuan/raw_data/rawdata_phip/Larman_DualTest_Ph27/*gz hlarman1@jhu.edu@gateway2.marcc.jhu.edu:~/work/data/PhIP-seq/PhIP-seq27_Sjogrens2/
+
+#phipseq27
+
+python ~/work/yuan/phip/bin/Process_FASTQ.py -t 0:50 -f ~/work/data/PhIP-seq/Historic/PhIP-seq27_Sjogrens2/Undetermined_S0_L001_R1_001.fastq.gz  -i ~/work/data/PhIP-seq/Historic/PhIP-seq27_Sjogrens2/Undetermined_S0_L001_I1_001.fastq.gz  -b ~/work/data/PhIP-seq/Historic/PhIP-seq27_Sjogrens2/20160625_Sjogrens2_sampleBarcodeMap.txt  -o ~/work/yuan/rawdata_phip/Historic/phipseq27/  -y ~/work/yuan/results_phip/Historic/phipseq27
+
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq27_human/variables.txt > ~/work/yuan/results_phip/phipseq27_human/variables.txt.log
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/phipseq27_virus/variables.txt > ~/work/yuan/results_phip/phipseq27_virus/variables.txt.log
+
+#Janelle
+python ~/work/yuan/phip/bin/Process_FASTQ.py -f ~/work/data/PhIP-seq/PhIP-seq27_Sjogrens2/Undetermined_S0_L001_R1_001.fastq  -i ~/work/data/PhIP-seq/PhIP-seq27_Sjogrens2/Undetermined_S0_L001_I1_001.fastq  -b ~/work/data/PhIP-seq/PhIP-seq27_Sjogrens2/20160628_JanelleBarcodeMap.txt  -o /home-2/hlarman1@jhu.edu/work/yuan/rawdata_others/phipseq27_Janelle/ 
+
+#Joe
+python ~/work/yuan/phip/bin/Process_FASTQ.py -t 9:51 -f ~/work/data/PhIP-seq/PhIP-seq27_Sjogrens2/Undetermined_S0_L001_R1_001.fastq  -i ~/work/data/PhIP-seq/PhIP-seq27_Sjogrens2/Undetermined_S0_L001_I1_001.fastq  -b ~/work/data/PhIP-seq/PhIP-seq27_Sjogrens2/20160628_JoelBarcodeMap.txt  -o /home-2/hlarman1@jhu.edu/work/yuan/rawdata_LISH/phipseq27/  -r /home-2/hlarman1@jhu.edu/work/yuan/results_LISH/phipseq27/
+
+python ~/work/yuan/phip/bin/LISH.py /home-2/hlarman1@jhu.edu/work/yuan/results_LISH/phipseq27/variables.txt
+
+
+##########
+20160602
+#
+rsync /home/yuan/Downloads/IgE_PhIP-seq1_barcode_map.txt hlarman1@jhu.edu@gateway2.marcc.jhu.edu:/home-2/hlarman1@jhu.edu/work/data/IgE_PhIP-seq
+
+python Process_FASTQ.py -f /home-2/hlarman1@jhu.edu/work/data/IgE_PhIP-seq/Undetermined_S0_L002_R1_001.fastq  -i /home-2/hlarman1@jhu.edu/work/data/IgE_PhIP-seq/Undetermined_S0_L002_I1_001.fastq    -b /home-2/hlarman1@jhu.edu/work/data/IgE_PhIP-seq/IgE_PhIP-seq1_barcode_map.txt    -o  /scratch/groups/hlarman1/yuan/rawdata_phip/phipseqIgE/ -r /scratch/groups/hlarman1/yuan/results_phip/phipseqIgE_virus/
+
+cp /home-2/hlarman1@jhu.edu/work/yuan/phip/variables_virus.txt /scratch/groups/hlarman1/yuan/results_phip/phipseqIgE_virus/variables.txt
+
+python ~/work/yuan/phip/bin/PHIPseq.py /scratch/groups/hlarman1/yuan/results_phip/phipseqIgE_virus/variables.txt
+
+
+#################################
+#20160505
+##################################
+#samples
+ PhIP-seq11_twins1  PhIP-seq13_twins3  PhIP-seq15_twins5  PhIP-seq17_CTLA4etc  PhIP-seq7_Drake  PhIP-seq9_HIV
+PhIP-seq10_INPUT  PhIP-seq12_twins2  PhIP-seq14_twins4  PhIP-seq16_twins6  PhIP-seq18_HIV2      PhIP-seq8_ICL
+
+
+#mkdir
+phipseq7 phipseq8 phipseq9 phipseq10 phipseq11_virus phipseq12_virus phipseq13_virus phipseq14_virus phipseq15_virus phipseq16_virus phipseq17_virus phipseq18_virus
+
+phipseq7_virus phipseq8_virus phipseq9_virus phipseq10_virus phipseq11_virus phipseq12_virus phipseq13_virus phipseq14_virus phipseq15_virus phipseq16_virus phipseq17_virus phipseq18_virus
+
+phipseq7_virus phipseq8_virus phipseq9_virus phipseq10_virus phipseq11_virus phipseq12_virus phipseq13_virus phipseq14_virus phipseq15_virus phipseq16_virus phipseq17_virus phipseq18_virus
+
+
+#phipseq7
+python phip/bin/Process_FASTQ.py -f /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq7_Drake/PhIP-seq7_2_R1_001.fastq  -i /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq7_Drake/PhIP-seq7_2_I1_001.fastq  -b  /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq7_Drake/PhIP-seq7_Prostate_Drake_SamplesBarcodeMap.txt -o /home-2/hlarman1@jhu.edu/work/yuan/rawdata_phip/phipseq7/2/  -r /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq7_human/
+
+python phip/bin/Process_FASTQ.py -f /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq7_Drake/PhIP-seq7_3_R1_001.fastq  -i /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq7_Drake/PhIP-seq7_3_I1_001.fastq  -b  /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq7_Drake/PhIP-seq7_Prostate_Drake_SamplesBarcodeMap.txt -o /home-2/hlarman1@jhu.edu/work/yuan/rawdata_phip/phipseq7/3/  -r /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq7_virus/
+
+
+#phipseq8
+python ~/work/yuan/phip/bin/Process_FASTQ.py -t 8:0 -f /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq8_ICL/Undetermined_S0_L005_R1_001.fastq  -i /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq8_ICL/Undetermined_S0_L005_I1_001.fastq  -b  /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq8_ICL/PhIP-seq8_ICL_SamplesBarcodeMap.txt -o ~/work/yuan/rawdata_phip/phipseq8/  -r ~/work/yuan/results_phip/phipseq8_human/
+
+cp /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq8_human/sample_info.csv /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq8_virus/
+
+
+
+#phipseq9
+python phip/bin/Process_FASTQ.py -f /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq9_HIV/20160120_PhIP9H_rerun7nt_R1_001.fastq -i /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq9_HIV/20160120_PhIP9H_rerun7nt_I1_001.fastq  -b /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq9_HIV/PhIP-seq9_HIV_7nt_barcode_map.txt -o /home-2/hlarman1@jhu.edu/work/yuan/rawdata_phip/phipseq9/7nt/  -r /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq9_human/
+
+python phip/bin/Process_FASTQ.py -f /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq9_HIV/20160122_PhIP9H_rerun8nt_R1_001.fastq  -i /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq9_HIV/20160122_PhIP9H_rerun8nt_I1_001.fastq -b /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq9_HIV/20150504_HIV_barcode_map.txt  -o /home-2/hlarman1@jhu.edu/work/yuan/rawdata_phip/phipseq9/8nt/  -r /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq9_virus/
+
+
+#phipseq10
+python phip/bin/Process_FASTQ.py -t 8:0 -f /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq10_INPUT/Undetermined_S0_L006_R1_001.fastq  -i /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq10_INPUT/Undetermined_S0_L006_I1_001.fastq    -b  /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq10_INPUT/PhIP-seq10_INPUT_SamplesBarcodeMap.txt   -o  /home-2/hlarman1@jhu.edu/work/yuan/rawdata_phip/phipseq10/ -r /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq10_human/
+
+cp /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq10_human/sample_info.csv /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq10_virus/
+
+
+ 
+#phipseq11
+python phip/bin/Process_FASTQ.py -f /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq11_twins1/PhIP-seq11_R1_001.fastq  -i /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq11_twins1/PhIP-seq11_I1_001.fastq -b  /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq11_twins1/PhIP-seq11_Twins_SampleBarcodeMap.txt -o /home-2/hlarman1@jhu.edu/work/yuan/rawdata_phip/phipseq11/1/  -r /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq11_human/
+
+python phip/bin/Process_FASTQ.py -f /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq11_twins1/PhIP-seq11_2_R1_001.fastq  -i /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq11_twins1/PhIP-seq11_2_I1_001.fastq -b  /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq11_twins1/PhIP-seq11_Twins_SampleBarcodeMap.txt -o /home-2/hlarman1@jhu.edu/work/yuan/rawdata_phip/phipseq11/2/  -r /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq11_virus/
+
+
+
+#phipseq12
+python phip/bin/Process_FASTQ.py -f /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq12_twins2/PhIP-seq12_R1_001.fastq  -i /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq12_twins2/PhIP-seq12_I1_001.fastq -b  /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq12_twins2/PhIP-seq12_Twins_SampleBarcodeMap.txt -o /home-2/hlarman1@jhu.edu/work/yuan/rawdata_phip/phipseq12/1/  -r /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq12_human/
+
+python phip/bin/Process_FASTQ.py -f /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq12_twins2/PhIP-seq12_2_R1_001.fastq  -i /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq12_twins2/PhIP-seq12_2_I1_001.fastq -b  /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq12_twins2/PhIP-seq12_Twins_SampleBarcodeMap.txt -o /home-2/hlarman1@jhu.edu/work/yuan/rawdata_phip/phipseq12/2/  -r /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq12_virus/
+
+
+#phipseq13
+python phip/bin/Process_FASTQ.py -f /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq13_twins3/PhIP-seq13_R1_001.fastq  -i /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq13_twins3/PhIP-seq13_I1_001.fastq -b  /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq13_twins3/PhIP-seq13_Twins_SampleBarcodeMap.txt -o /home-2/hlarman1@jhu.edu/work/yuan/rawdata_phip/phipseq13/1/  -r /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq13_human/
+
+python Process_FASTQ.py -f /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq13_twins3/PhIP-seq13_2_R1_001.fastq  -i /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq13_twins3/PhIP-seq13_2_I1_001.fastq -b  /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq13_twins3/PhIP-seq13_Twins_SampleBarcodeMap.txt -o /home-2/hlarman1@jhu.edu/work/yuan/rawdata_phip/phipseq13/2/  -r /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq13_virus/
+
+
+#phipseq14
+python phip/bin/Process_FASTQ.py -f /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq14_twins4/PhIP-seq14_R1_001.fastq  -i /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq14_twins4/PhIP-seq14_I1_001.fastq -b  /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq14_twins4/PhIP-seq14_Twins_SampleBarcodeMap.txt -o /home-2/hlarman1@jhu.edu/work/yuan/rawdata_phip/phipseq14/1/  -r /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq14_human/
+
+python phip/bin/Process_FASTQ.py -f /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq14_twins4/PhIP-seq14_2_R1_001.fastq  -i /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq14_twins4/PhIP-seq14_2_I1_001.fastq -b  /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq14_twins4/PhIP-seq14_Twins_SampleBarcodeMap.txt -o /home-2/hlarman1@jhu.edu/work/yuan/rawdata_phip/phipseq14/2/  -r /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq14_virus/
+
+
+#phipseq15
+python phip/bin/Process_FASTQ.py -f /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq15_twins5/PhIP-seq15_R1_001.fastq  -i /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq15_twins5/PhIP-seq15_I1_001.fastq -b  /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq15_twins5/PhIP-seq15_Twins_SampleBarcodeMap.txt -o /home-2/hlarman1@jhu.edu/work/yuan/rawdata_phip/phipseq15/1/  -r /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq15_human/
+
+python phip/bin/Process_FASTQ.py -f /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq15_twins5/PhIP-seq15_2_R1_001.fastq  -i /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq15_twins5/PhIP-seq15_2_I1_001.fastq -b  /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq15_twins5/PhIP-seq15_Twins_SampleBarcodeMap.txt -o /home-2/hlarman1@jhu.edu/work/yuan/rawdata_phip/phipseq15/2/  -r /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq15_virus/
+
+
+#phipseq16
+python phip/bin/Process_FASTQ.py -f /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq16_twins6/PhIP-seq16_R1_001.fastq  -i /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq16_twins6/PhIP-seq16_I1_001.fastq -b  /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq16_twins6/PhIP-seq16_Twins_SampleBarcodeMap.txt -o /home-2/hlarman1@jhu.edu/work/yuan/rawdata_phip/phipseq16/1/  -r /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq16_human/
+
+python phip/bin/Process_FASTQ.py -f /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq16_twins6/PhIP-seq16_2_R1_001.fastq  -i /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq16_twins6/PhIP-seq16_2_I1_001.fastq -b  /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq16_twins6/PhIP-seq16_Twins_SampleBarcodeMap.txt -o /home-2/hlarman1@jhu.edu/work/yuan/rawdata_phip/phipseq16/2/  -r /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq16_virus/
+
+
+#phipseq17
+python phip/bin/Process_FASTQ.py -f /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq17_CTLA4etc/PhIP-seq17_R1_001.fastq  -i /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq17_CTLA4etc/PhIP-seq17_I1_001.fastq  -b  /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq17_CTLA4etc/PhIP-seq17_CTLA4etc_SampleBarcodeMap.txt  -o  /home-2/hlarman1@jhu.edu/work/yuan/rawdata_phip/phipseq17/1/ -r /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq17_human/
+
+python phip/bin/Process_FASTQ.py -f /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq17_CTLA4etc/PhIP-seq17_2_R1_001.fastq  -i /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq17_CTLA4etc/PhIP-seq17_2_I1_001.fastq  -b  /scratch/groups/hlarman1/data/PhIP-seq/PhIP-seq17_CTLA4etc/PhIP-seq17_CTLA4etc_SampleBarcodeMap.txt  -o  /home-2/hlarman1@jhu.edu/work/yuan/rawdata_phip/phipseq17/2/ -r /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq17_virus/
+
+
+
+#phipseq18
+python phip/bin/Process_FASTQ.py -f /home-2/hlarman1@jhu.edu/work/data/PhIP-seq/PhIP-seq18_HIV2/20160122_PhIP18_7nt_R1_001.fastq -i /home-2/hlarman1@jhu.edu/work/data/PhIP-seq/PhIP-seq18_HIV2/20160120_PhIP18_7nt_I1_001.fastq -b /home-2/hlarman1@jhu.edu/work/data/PhIP-seq/PhIP-seq18_HIV2/PhIP-seq18_HIV2_7nt_bacode_map.txt  -o /home-2/hlarman1@jhu.edu/work/yuan/rawdata_phip/phipseq18/7nt/ -r /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq18_human/
+
+python phip/bin/Process_FASTQ.py -f /home-2/hlarman1@jhu.edu/work/data/PhIP-seq/PhIP-seq18_HIV2/20160122_PhIP18_8nt_R1_001.fastq -i /home-2/hlarman1@jhu.edu/work/data/PhIP-seq/PhIP-seq18_HIV2/20160122_PhIP18_8nt_I1_001.fastq -b /home-2/hlarman1@jhu.edu/work/data/PhIP-seq/PhIP-seq18_HIV2/PhIP-seq18_HIV2_bacode_map.txt  -o /home-2/hlarman1@jhu.edu/work/yuan/rawdata_phip/phipseq18/8nt/ -r /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq18_virus/
+
+
+#copy variables.txt
+cp /home-2/hlarman1@jhu.edu/work/yuan/phip/variables_human.txt /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq7_human/variables.txt
+cp /home-2/hlarman1@jhu.edu/work/yuan/phip/variables_virus.txt /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq7_virus/variables.txt
+cp /home-2/hlarman1@jhu.edu/work/yuan/phip/variables_human.txt /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq8_human/variables.txt
+cp /home-2/hlarman1@jhu.edu/work/yuan/phip/variables_virus.txt /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq8_virus/variables.txt
+cp /home-2/hlarman1@jhu.edu/work/yuan/phip/variables_human.txt /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq9_human/variables.txt
+cp /home-2/hlarman1@jhu.edu/work/yuan/phip/variables_virus.txt /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq9_virus/variables.txt
+cp /home-2/hlarman1@jhu.edu/work/yuan/phip/variables_human.txt /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq10_human/variables.txt
+cp /home-2/hlarman1@jhu.edu/work/yuan/phip/variables_virus.txt /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq10_virus/variables.txt
+cp /home-2/hlarman1@jhu.edu/work/yuan/phip/variables_human.txt /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq11_human/variables.txt
+cp /home-2/hlarman1@jhu.edu/work/yuan/phip/variables_virus.txt /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq11_virus/variables.txt
+cp /home-2/hlarman1@jhu.edu/work/yuan/phip/variables_human.txt /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq12_human/variables.txt
+cp /home-2/hlarman1@jhu.edu/work/yuan/phip/variables_virus.txt /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq12_virus/variables.txt
+cp /home-2/hlarman1@jhu.edu/work/yuan/phip/variables_human.txt /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq13_human/variables.txt
+cp /home-2/hlarman1@jhu.edu/work/yuan/phip/variables_virus.txt /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq13_virus/variables.txt
+cp /home-2/hlarman1@jhu.edu/work/yuan/phip/variables_human.txt /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq14_human/variables.txt
+cp /home-2/hlarman1@jhu.edu/work/yuan/phip/variables_virus.txt /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq14_virus/variables.txt
+cp /home-2/hlarman1@jhu.edu/work/yuan/phip/variables_human.txt /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq15_human/variables.txt
+cp /home-2/hlarman1@jhu.edu/work/yuan/phip/variables_virus.txt /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq15_virus/variables.txt
+cp /home-2/hlarman1@jhu.edu/work/yuan/phip/variables_human.txt /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq16_human/variables.txt
+cp /home-2/hlarman1@jhu.edu/work/yuan/phip/variables_virus.txt /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq16_virus/variables.txt
+cp /home-2/hlarman1@jhu.edu/work/yuan/phip/variables_human.txt /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq17_human/variables.txt
+cp /home-2/hlarman1@jhu.edu/work/yuan/phip/variables_virus.txt /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq17_virus/variables.txt
+cp /home-2/hlarman1@jhu.edu/work/yuan/phip/variables_human.txt /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq18_human/variables.txt
+cp /home-2/hlarman1@jhu.edu/work/yuan/phip/variables_virus.txt /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq18_virus/variables.txt
+
+
+#running
+python ~/work/yuan/phip/bin/PHIPseq.py /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq7_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq7_virus/variables.txt
+
+python ~/work/yuan/phip/bin/PHIPseq.py /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq8_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq8_virus/variables.txt
+
+python ~/work/yuan/phip/bin/PHIPseq.py /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq9_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq9_virus/variables.txt
+
+python ~/work/yuan/phip/bin/PHIPseq.py /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq10_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq10_virus/variables.txt
+
+
+python ~/work/yuan/phip/bin/PHIPseq.py /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq11_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq11_virus/variables.txt
+
+python ~/work/yuan/phip/bin/PHIPseq.py /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq12_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq12_virus/variables.txt
+
+python ~/work/yuan/phip/bin/PHIPseq.py /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq13_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq13_virus/variables.txt
+
+python ~/work/yuan/phip/bin/PHIPseq.py /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq14_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq14_virus/variables.txt
+
+python ~/work/yuan/phip/bin/PHIPseq.py /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq15_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq15_virus/variables.txt
+
+python ~/work/yuan/phip/bin/PHIPseq.py /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq16_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq16_virus/variables.txt
+
+python ~/work/yuan/phip/bin/PHIPseq.py /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq17_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq17_virus/variables.txt
+
+python ./phip/bin/PHIPseq.py /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq18_human/variables.txt
+python ./phip/bin/PHIPseq.py /home-2/hlarman1@jhu.edu/work/yuan/results_phip/phipseq18_virus/variables.txt
+
+##########################
+##Feburary data
+##phipseq 7
+python ~/work/yuan/phip/bin/Process_FASTQ.py -t 8:0 -f ~/work/data/PhIP-seq/Historic/PhIP-seq7_Drake/Undetermined_S0_L004_R1_001.fastq  -i ~/work/data/PhIP-seq/Historic/PhIP-seq7_Drake/Undetermined_S0_L004_I1_001.fastq  -b ~/work/data/PhIP-seq/Historic/PhIP-seq7_Drake/PhIP-seq7_Prostate_Drake_SamplesBarcodeMap.txt  -o ~/work/yuan/rawdata_phip/Historic/phipseq7/  -r ~/work/yuan/results_phip/Historic/phipseq7_human/
+
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/Historic/phipseq7_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/Historic/phipseq7_virus/variables.txt
+
+
+#phipseq9
+python ~/work/yuan/phip/bin/Process_FASTQ.py -f ~/work/data/PhIP-seq/Historic/PhIP-seq9_HIV/HF3LLBCXXs_2_1_merged.fastq   -i ~/work/data/PhIP-seq/Historic/PhIP-seq9_HIV/HF3LLBCXXs_2_2_merged.fastq  -b ~/work/data/PhIP-seq/PhIP-seq9_HIV/20150504_HIV_barcode_map.txt -o ~/work/yuan/rawdata_phip/Historic/phipseq9/  -r ~/work/yuan/results_phip/Historic/phipseq9_human/
+
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/Historic/phipseq9_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/Historic/phipseq9_virus/variables.txt
+
+
+#phipseq5
+python ~/work/yuan/phip/bin/Process_FASTQ.py -t 8:0 -f ~/work/data/PhIP-seq/Historic/PhIP-seq5_Diaz/Undetermined_S0_L002_R1_001.fastq   -i ~/work/data/PhIP-seq/Historic/PhIP-seq5_Diaz/Undetermined_S0_L002_I1_001.fastq -b ~/work/data/PhIP-seq/Historic/PhIP-seq5_Diaz/PhIP-seq5_Diaz_SamplesBarcodeMap.txt   -o ~/work/yuan/rawdata_phip/Historic/phipseq5/42nt/  -r ~/work/yuan/results_phip/Historic/phipseq5_human/
+
+python ~/work/yuan/phip/bin/Process_FASTQ.py -f ~/work/data/PhIP-seq/Historic/PhIP-seq5_Diaz/Undetermined_S0_L008_R1_001.fastq -i ~/work/data/PhIP-seq/Historic/PhIP-seq5_Diaz/Undetermined_S0_L008_I1_001.fastq -b ~/work/data/PhIP-seq/Historic/PhIP-seq5_Diaz/PhIP-seq5_Diaz_SamplesBarcodeMap.txt   -o ~/work/yuan/rawdata_phip/Historic/phipseq5/50nt/  -r ~/work/yuan/results_phip/Historic/phipseq5_virus/
+
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/Historic/phipseq5_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/Historic/phipseq5_virus/variables.txt
+
+
+#phipseq4
+python ~/work/yuan/phip/bin/Process_FASTQ.py -t 8:0 -f ~/work/data/PhIP-seq/Historic/PhIP-seq4_Ribas/Undetermined_S0_L001_R1_001.fastq   -i ~/work/data/PhIP-seq/Historic/PhIP-seq4_Ribas/Undetermined_S0_L001_I1_001.fastq -b ~/work/data/PhIP-seq/Historic/PhIP-seq4_Ribas/PhIP-seq4_Ribas_SamplesBarcodeMap.txt     -o ~/work/yuan/rawdata_phip/Historic/phipseq4/42nt/  -r ~/work/yuan/results_phip/Historic/phipseq4_human/
+
+python ~/work/yuan/phip/bin/Process_FASTQ.py -f ~/work/data/PhIP-seq/Historic/PhIP-seq4_Ribas/Undetermined_S0_L007_R1_001.fastq   -i ~/work/data/PhIP-seq/Historic/PhIP-seq4_Ribas/Undetermined_S0_L007_I1_001.fastq -b ~/work/data/PhIP-seq/Historic/PhIP-seq4_Ribas/PhIP-seq4_Ribas_SamplesBarcodeMap.txt     -o ~/work/yuan/rawdata_phip/Historic/phipseq4/50nt/  -r ~/work/yuan/results_phip/Historic/phipseq4_virus/
+
+cp ~/work/yuan/phip/variables_human.txt ~/work/yuan/results_phip/Historic/phipseq4_human/variables.txt 
+cp ~/work/yuan/phip/variables_virus.txt ~/work/yuan/results_phip/Historic/phipseq4_virus/variables.txt 
+
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/Historic/phipseq4_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/Historic/phipseq4_virus/variables.txt
+
+
+#phipseq3
+python ~/work/yuan/phip/bin/Process_FASTQ.py -f ~/work/data/PhIP-seq/Historic/PhIP-seq3_Arthritides/H7WGJBCXXs_2_1_merged.fastq     -i ~/work/data/PhIP-seq/Historic/PhIP-seq3_Arthritides/H7WGJBCXXs_2_2_merged.fastq -b ~/work/data/PhIP-seq/Historic/PhIP-seq3_Arthritides/20150617_PhIP-seq3_Arthritides_Sample-Barcode_map.txt       -o ~/work/yuan/rawdata_phip/Historic/phipseq3/  -r ~/work/yuan/results_phip/Historic/phipseq3_human/
+
+
+cp ~/work/yuan/phip/variables_human.txt ~/work/yuan/results_phip/Historic/phipseq3_human/variables.txt 
+cp ~/work/yuan/phip/variables_virus.txt ~/work/yuan/results_phip/Historic/phipseq3_virus/variables.txt 
+
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/Historic/phipseq3_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/Historic/phipseq3_virus/variables.txt
+
+#phipseq2
+python ~/work/yuan/phip/bin/Process_FASTQ.py -t 8:0 -f ~/work/data/PhIP-seq/Historic/PhIP-seq2_Scleroderma/H3KLGBCXXs_2_1_merged.fastq     -i ~/work/data/PhIP-seq/Historic/PhIP-seq2_Scleroderma/H3KLGBCXXs_2_2_merged.fastq   -b ~/work/data/PhIP-seq/Historic/PhIP-seq2_Scleroderma/20150611_PhIPseq2_Sample-Barcode_map.txt   -o ~/work/yuan/rawdata_phip/Historic/phipseq2/H3KLGBCXXs/  -r ~/work/yuan/results_phip/Historic/phipseq2_human/
+
+python ~/work/yuan/phip/bin/Process_FASTQ.py -t 8:0 -f ~/work/data/PhIP-seq/Historic/PhIP-seq2_Scleroderma/H5NJWBCXXs_2_1_merged.fastq       -i ~/work/data/PhIP-seq/Historic/PhIP-seq2_Scleroderma/H5NJWBCXXs_2_2_merged.fastq   -b ~/work/data/PhIP-seq/Historic/PhIP-seq2_Scleroderma/20150611_PhIPseq2_Sample-Barcode_map.txt   -o ~/work/yuan/rawdata_phip/Historic/phipseq2/H5NJWBCXXs/  -r ~/work/yuan/results_phip/Historic/phipseq2_virus/
+
+python ~/work/yuan/phip/bin/Process_FASTQ.py -t 8:0 -f ~/work/data/PhIP-seq/Historic/PhIP-seq2_Scleroderma/PhIP-seq2+PhIX_longSP_1_1_merged.fastq       -i ~/work/data/PhIP-seq/Historic/PhIP-seq2_Scleroderma/PhIP-seq2+PhIX_longSP_1_2_merged.fastq -b ~/work/data/PhIP-seq/Historic/PhIP-seq2_Scleroderma/20150611_PhIPseq2_Sample-Barcode_map.txt   -o ~/work/yuan/rawdata_phip/Historic/phipseq2/PhIX_longSP/  -r ~/work/yuan/results_phip/Historic/phipseq2_virus/
+
+python ~/work/yuan/phip/bin/Process_FASTQ.py -f ~/work/data/PhIP-seq/Historic/PhIP-seq2_Scleroderma/PhIP-seq2+PhIX_mixedSP_1_1_merged.fastq     -i ~/work/data/PhIP-seq/Historic/PhIP-seq2_Scleroderma/PhIP-seq2+PhIX_mixedSP_1_2_merged.fastq -b ~/work/data/PhIP-seq/Historic/PhIP-seq2_Scleroderma/20150611_PhIPseq2_Sample-Barcode_map.txt   -o ~/work/yuan/rawdata_phip/Historic/phipseq2/PhIX_mixedSP/  -r ~/work/yuan/results_phip/Historic/phipseq2_virus/
+
+
+cp ~/work/yuan/phip/variables_human.txt ~/work/yuan/results_phip/Historic/phipseq2_human/variables.txt 
+cp ~/work/yuan/phip/variables_virus.txt ~/work/yuan/results_phip/Historic/phipseq2_virus/variables.txt 
+
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/Historic/phipseq2_human/variables.txt
+python ~/work/yuan/phip/bin/PHIPseq.py ~/work/yuan/results_phip/Historic/phipseq2_virus/variables.txt
+
+########################333
+#other upload
+
+rsync -ar --progress --delete /home/yuan/mysql_pre/JHU_projects/twins/*   hlarman1@jhu.edu@gateway2.marcc.jhu.edu:./work/yuan/results_phip/statistical_results/phipseq17/
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
